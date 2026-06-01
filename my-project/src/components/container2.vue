@@ -5,7 +5,8 @@
     </div>
     <ProductFilter />
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 mt-3 gap-4">
-      <div
+      <router-link
+        to="/productDetails"
         class="flex flex-col justify-center p-3 bg-white shadow-md rounded-[15px] transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl group overflow-hidden"
         v-for="(item, index) in products"
         :key="index"
@@ -54,7 +55,7 @@
             Xem qua
           </button>
         </div>
-      </div>
+      </router-link>
     </div>
   </div>
 </template>

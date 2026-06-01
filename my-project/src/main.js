@@ -13,6 +13,9 @@ import Product from "./Client/product.vue";
 import Cart from "./Client/cart.vue";
 import Thanks from "./Client/thanks.vue";
 import Orders from "./Client/Orders.vue";
+import ProductDetails from "./Client/productDetails.vue";
+import ProductInfo from "./components/ProductInfo.vue";
+import ProductSpecification from "./components/ProductSpecification.vue";
 
 const routes = [
   {
@@ -50,6 +53,20 @@ const routes = [
   {
     path: "/Orders",
     component: Orders,
+  },
+  {
+    path: "/productDetails",
+    component: ProductDetails,
+    children: [
+      {
+        path: "",
+        component: ProductInfo,
+      },
+      {
+        path: "specification",
+        component: ProductSpecification,
+      },
+    ],
   },
 ];
 
